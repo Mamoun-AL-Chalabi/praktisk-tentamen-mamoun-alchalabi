@@ -56,13 +56,15 @@ Country.prototype.display=function(){
    let main = document.createElement('main');
    let time = new Date();
    let time1 = time.getUTCHours(); 
+   let time11 =time.getMinutes();
    let time3 = this.timeZone.substr(5,1);
    let time4 = parseInt(time3);
     console.log(time4)
     console.log(time3)
     let time5=time1+time4
     console.log(time5)
-    this.timeZone=time5
+    let time6 =`${time5} , ${time11}`;
+    this.timeZone=time6;
    name1.innerHTML =this.name;
    timeZone1.innerHTML =this.timeZone;
    urlFlag1.src=this.urlFlag;
